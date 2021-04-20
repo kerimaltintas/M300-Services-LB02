@@ -13,11 +13,11 @@ Bei der Containerisierung handelt es sich um eine Art Virtualisierung auf Anwend
 * Bei hohen, konkurrierenden Ressourcenanforderungen ist die Leistung von Anwendungen  die aus einer Containerumgebung ausgeführt werden weitaus besser als bei der Ausführung in einer virtuellen Maschine.
 
 
-## 01 Docker 
+### 01 Docker 
 Docker ist eine Freie Software zur Isolierung von Anwendungen mit Hilfe von Containervirtualisierung. Docker vereinfacht die Bereitstellung von Anwendungen, weil sich Container, die alle nötigen Pakete enthalten, leicht als Dateien transportieren und installieren lassen. Container gewährleisten die Trennung und Verwaltung der auf einem Rechner genutzten Ressourcen. 
 
 
-## 02 Virtuelle Maschine vs Docker
+### 02 Virtuelle Maschine vs Docker
 
 Wie man gut erkennen kann, geht es hier um den Vergleich zwischen virtuellen Maschinen und Containern. Beide haben ihre Vor und Nachteile. Doch für die minimierung der weniger wichtigen Ressourcen ist Docker sehr gut geeignet. In diesem Beispiel hat auf der virtuellen Maschine Seite jede App ein eigenes Betriebssystem. Dies ist bei Containiesierung (Docker) nicht der Fall. Da wird das Betriebssystem von unserem Dockerbereitgestellt und die Apps teilen sich dies.
 
@@ -25,7 +25,7 @@ Wie man gut erkennen kann, geht es hier um den Vergleich zwischen virtuellen Mas
 
 
 
-## 03 Webserver einrichten
+### 03 Webserver einrichten
 Zuerst muss das Image erstellt werden. Mit docker build.
 
 ![alt text](Bilder/6.JPG "VMvsDocker")
@@ -45,7 +45,7 @@ Zum Schluss kann man mit der eigenen IP und dem richtigen Port überprüfen ob d
 
 
 
-## 04 Docker Befehle
+### 04 Docker Befehle
 | Befehl            | Funktion                                             |
 | -------------     | ---------------------------------------------------- | 
 | ```docker pull```     | Holt ein Image. |
@@ -59,14 +59,14 @@ Zum Schluss kann man mit der eigenen IP und dem richtigen Port überprüfen ob d
 | ```docker commit```   | Erstellt ein neues Image mit den Änderungen, die an einem Container vorgenommen worden sind. |
 | ```docker stop```     | Haltet die gewünschte Maschine an. |
 
-## 05 Netzwerkplan
+### 05 Netzwerkplan
 
 ![alt text](Bilder/10.JPG "VMvsDocker")
 
 
 ## 35 Sicherheit
 
-## 01 Monitoring 
+### 01 Monitoring 
 Nun geht es darum das ein Monitoring eingerichtet wird. Hierfür verwende ich den Port 8080. Das Image wird gefunden und eine Container ID wird dementsprechend verpasst. 
 
 ![alt text](Bilder/2.JPG "Check")
@@ -83,12 +83,12 @@ Zum Schluss kann man dann mit dem ausgewählte Port bei mir wäre dies jetzt 808
 
 ## 80 Ergänzungen zu den Unterlagen
 
-## Vergleich Vorwissen - Wissenszuwachs
+### Vergleich Vorwissen - Wissenszuwachs
 
 Zuvor hatte ich ziemlich wenig Kenntnisse zum ganze Containerthema. Ich hatte einen üK zur Virtualisierung kurz vor dem Modul beginn abgeschlosssen und dort hatten wir das Thema Container ein wenig behandelt. 
 
 Nun weiss ich wofür Container benutzt werden und wieso sie von Vorteil sind. Allerdings denke ich umd dies in einer Firma implementieren zu können braucht es Spezialisten die sich damit auskennen oder man beauftragt eine externe Firma dafür die Spezialisten zur Verfügung hat. Das Modul insbesondere die Lb02 hat mir sehr geholfen die ganze Virtualisierung besser zu verstehen und ich denke dies kann mir un Zukunft sehr viel weiterhelfen. Ich habe dazu gelernt wie man Container anwendet und die gewünschten Tools wie ein Ticketsystem laufen lässt. 
 
-## Reflexion
+### Reflexion
 
 Am Ende dieses Moduls kann ich behaupten das ich die Thematik dahinter verstanden habe. Auch wenn ich Statschwierigkeiten hatte mit gewissen Aufgaben, nahm ich mir die Zeit und versuchte sie wirklich zu verstehen. Ich hatte das Gefühl das man bei dieser LB02 wirklich das Thema verstanden haben muss um es umsetzen zu können in der Praxis. Ein eher komplexes und neues Thema welches hier behandelt wurde, doch sehr hilfreich um die Zukunft der Informatik besser nachvollziehen zu können.
