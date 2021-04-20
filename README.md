@@ -26,20 +26,20 @@ Wie man gut erkennen kann, geht es hier um den Vergleich zwischen virtuellen Mas
 
 
 ### 03 Webserver einrichten
-Zuerst muss das Image erstellt werden. Mit docker build.
+* Zuerst muss das Image erstellt werden. Mit docker build.
 
 ![alt text](Bilder/6.JPG "VMvsDocker")
 
 
-Anschliessend wird der Port 5050 konfiguriert für den Webserver.
+* Anschliessend wird der Port 5050 konfiguriert für den Webserver.
 
 ![alt text](Bilder/4.JPG "PortConfig")
 
-Nun kann man mit docker ps überprüfen ob dieses Image iene Container ID bekommen hat und ob der Port eingetragen ist.
+* Nun kann man mit docker ps überprüfen ob dieses Image iene Container ID bekommen hat und ob der Port eingetragen ist.
 
 ![alt text](Bilder/8.JPG "Check")
 
-Zum Schluss kann man mit der eigenen IP und dem richtigen Port überprüfen ob der Webserver erreichbar ist. 
+* Zum Schluss kann man mit der eigenen IP und dem richtigen Port überprüfen ob der Webserver erreichbar ist. 
 
 ![alt text](Bilder/7.JPG "Check")
 
@@ -65,17 +65,18 @@ Zum Schluss kann man mit der eigenen IP und dem richtigen Port überprüfen ob d
 
 
 ## 35 Sicherheit
+Sowie das Überwachen und auch das Protokollieren von laufenden Containern ist sehr wichtig. Zum Beispiel bei den Microservices ist es wegen der höheren Zahl von Rechnern noch wichtiger.
 
 ### 01 Monitoring 
-Nun geht es darum das ein Monitoring eingerichtet wird. Hierfür verwende ich den Port 8080. Das Image wird gefunden und eine Container ID wird dementsprechend verpasst. 
+* Nun geht es darum das ein Monitoring eingerichtet wird. Hierfür verwende ich den Port 8080. Das Image wird gefunden und eine Container ID wird dementsprechend verpasst. 
 
 ![alt text](Bilder/2.JPG "Check")
 
-Nun kann man wieder überprüfen ob die Container ID und der Por eingetrgaen wurden unter docker ps.
+* Nun kann man wieder überprüfen ob die Container ID und der Por eingetrgaen wurden unter docker ps.
 
 ![alt text](Bilder/1.JPG "Check")
 
-Zum Schluss kann man dann mit dem ausgewählte Port bei mir wäre dies jetzt 8080, auf die Seite via Browser zugegriffen werden. 
+* Zum Schluss kann man dann mit dem ausgewählte Port bei mir wäre dies jetzt 8080, auf die Seite via Browser zugegriffen werden. 
 
 ![alt text](Bilder/9.JPG "Check")
 
