@@ -79,6 +79,67 @@ Zum Schluss kann man dann mit dem ausgewählte Port bei mir wäre dies jetzt 808
 
 ![alt text](Bilder/9.JPG "Check")
 
+### 02 Logging
+
+Die Logs können über den Befehl docker logs abgerufen werden. Es gibt mehrere Werte, die man über das Argument von docker auswählen kann:
+
+* json-file 
+
+Ausgaben abholen:
+````
+$ docker run --name logtest ubuntu bash -c 'echo "stdout"; echo "stderr" >>2'
+$ docker logs logtest
+$ docker rm logtest
+````
+Laufende Ausgaben:
+````
+$ docker run -d --name streamtest ubuntu bash -c 'while true; do echo "tick"; sleep 1; done;'
+$ docker logs streamtest
+$ docker logs streamtest | wc -l
+$ docker rm streamtest
+````
+
+Protokollierung in das System-Log des Hosts:
+````
+$ docker run -d --log-driver=syslog ubuntu bash -c 'i=0; while true; do i=$((i+1)); echo "docker $i"; sleep 1; done;'
+$ tail -f /var/log/syslog
+````
+
+### 03 Weitere Sicherheitstipps
+
+Hier sind noch weitere Sicherheitstipps welche einem bei einer Verbesserung oder Verschäfung der Sicherheit helfen könnten.
+
+* Netzwerkzugriff beschränken
+* setuid/setgid-Binaries entfernen
+* Speicher begrenzen
+
+````
+$ docker run -m 128m --memory-swap 128m amouat/stress stress --vm 1 --vm-bytes 127m -t 5s
+````
+
+* CPU beschränken
+````
+$ docker run -d --name load3 -c 512 amouat/stress
+````
+* Neustarts begrenzen
+````
+$ docker run -d --restart=on-failure:10 my-flaky-image
+````
+* Zugriffe aus Dateisysteme begrenzen
+````
+$ docker run --read-only ubuntu touch x
+````
+* Capabilities einschränken
+````
+$ docker run --cap-drop all --cap-add CHOWN ubuntu chown 100 /tmp
+````
+* Ressourcenbeschränkungen anwenden
+````
+$ docker run --ulimit cpu=12:14 amouat/stress stress --cpu 1
+````
+
+
+
 ## 40 Kubernetes (k8s)
 
 ## 80 Ergänzungen zu den Unterlagen
