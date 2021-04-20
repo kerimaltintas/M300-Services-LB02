@@ -76,7 +76,7 @@ Wie man gut erkennen kann, geht es hier um den Vergleich zwischen virtuellen Mas
 
 ### 06 Schichtenmodell
 
-![alt text](Bilder/11.JPG "VMvsDocker")
+![alt text](Bilder/11.JPG "Schichtenmodell")
 
 ## 35 Sicherheit
 Sowie das Überwachen und auch das Protokollieren von laufenden Containern ist sehr wichtig. Zum Beispiel bei den Microservices ist es wegen der höheren Zahl von Rechnern noch wichtiger.
@@ -124,13 +124,7 @@ $ tail -f /var/log/syslog
 
 Hier sind noch weitere Sicherheitstipps welche einem bei einer Verbesserung oder Verschäfung der Sicherheit helfen könnten.
 
-* Netzwerkzugriff beschränken
-* setuid/setgid-Binaries entfernen
-* Speicher begrenzen
 
-````
-$ docker run -m 128m --memory-swap 128m amouat/stress stress --vm 1 --vm-bytes 127m -t 5s
-````
 
 * CPU beschränken
 ````
@@ -144,14 +138,7 @@ $ docker run -d --restart=on-failure:10 my-flaky-image
 ````
 $ docker run --read-only ubuntu touch x
 ````
-* Capabilities einschränken
-````
-$ docker run --cap-drop all --cap-add CHOWN ubuntu chown 100 /tmp
-````
-* Ressourcenbeschränkungen anwenden
-````
-$ docker run --ulimit cpu=12:14 amouat/stress stress --cpu 1
-````
+
 
 
 
