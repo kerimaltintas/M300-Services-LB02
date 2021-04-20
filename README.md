@@ -74,6 +74,9 @@ Wie man gut erkennen kann, geht es hier um den Vergleich zwischen virtuellen Mas
 
 ![alt text](Bilder/10.JPG "VMvsDocker")
 
+### 06 Schichtenmodell
+
+![alt text](Bilder/11.JPG "VMvsDocker")
 
 ## 35 Sicherheit
 Sowie das Überwachen und auch das Protokollieren von laufenden Containern ist sehr wichtig. Zum Beispiel bei den Microservices ist es wegen der höheren Zahl von Rechnern noch wichtiger.
