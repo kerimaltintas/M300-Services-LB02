@@ -210,14 +210,22 @@ $ git: clone: false
 Nun mussten noch kleine Befehle abgearbeitet werden. Trotzdem kam keine Antwort der Webseite und denn fehlenden Beitrag. Unter My Builds sollte ich weitere Ausgabe haben. Doch es kam keine,auch nach Tagen an dem zu arbeiten, leider gab es keinen Eintrag uter My Builds. 
 
 
+### 03 Testing
 
+| Testfall     |    Funktionsfähigkeit   |
+| ------------- |:-------------:|
+| Container starten lassen       |    Funktioniert  | 
+| Von Client aus auf http://10.2.45.10:8082/ (phpmyadmin) | Funktioniert
+| Mit root & Passwort anmelden | Funktioniert
+| Webserver mit Apache erreichbar | Funktioniert
+|
 
-### 03 Vergleich Vorwissen - Wissenszuwachs
+### 04 Vergleich Vorwissen - Wissenszuwachs
 
 Zuvor hatte ich ziemlich wenig Kenntnisse zum ganze Containerthema. Ich hatte einen üK zur Virtualisierung kurz vor dem Modul beginn abgeschlosssen und dort hatten wir das Thema Container ein wenig behandelt. 
 
 Nun weiss ich wofür Container benutzt werden und wieso sie von Vorteil sind. Allerdings denke ich umd dies in einer Firma implementieren zu können braucht es Spezialisten die sich damit auskennen oder man beauftragt eine externe Firma dafür die Spezialisten zur Verfügung hat. Das Modul insbesondere die Lb02 hat mir sehr geholfen die ganze Virtualisierung besser zu verstehen und ich denke dies kann mir un Zukunft sehr viel weiterhelfen. Ich habe dazu gelernt wie man Container anwendet und die gewünschten Tools wie ein Ticketsystem laufen lässt. 
 
-### 04 Reflexion
+### 05 Reflexion
 
 Am Ende dieses Moduls kann ich behaupten das ich die Thematik dahinter verstanden habe. Auch wenn ich Statschwierigkeiten hatte mit gewissen Aufgaben, nahm ich mir die Zeit und versuchte sie wirklich zu verstehen. Ich hatte das Gefühl das man bei dieser LB02 wirklich das Thema verstanden haben muss um es umsetzen zu können in der Praxis. Ein eher komplexes und neues Thema welches hier behandelt wurde, doch sehr hilfreich um die Zukunft der Informatik besser nachvollziehen zu können.
