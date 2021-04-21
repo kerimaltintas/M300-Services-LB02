@@ -72,13 +72,13 @@ Hier war es die Aufgabe bestehende zwei Container zu kombinieren. Dafür habe ic
 $ docker pull mysql:8.0.1
 ````
 ````
-$ ocker run --name my-own-mysql -e MYSQL_ROOT_PASSWORD=mypass123 -d mysql:8.0.1
+$ docker run --name my-own-mysql -e MYSQL_ROOT_PASSWORD=mypass123 -d mysql:8.0.1
 ````
 ````
 $ docker pull phpmyadmin/phpmyadmin:latest
 ````
 ````
-$ docker run --name my-own-phpmyadmin -d --link my-own-mysql:db -p 8082:80 phpmyadmin/phpmyadmin
+$ docker run --name my-own-phpmyadmin -d --link my-own-mysql:db -p 8082:80 phpmyadmin/ phpmyadmin
 ````
 
 Zuerst hatte ich Problemem mit dem Erreichen der phpmyadmin Site und fragte mich wieso dies nicht ging. Erst später fiel mir auf das ich den Port 8081 bereits im Benutzung hatte und auf den Port 8082 wechseln musste. 
