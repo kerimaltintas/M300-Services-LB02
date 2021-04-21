@@ -64,8 +64,36 @@ $ docker run -dit --name apachevolume -p 5050:80 apachevolume
 Danach konnte man wie auch beim Webserver mit dem konfigurierten Port 5050 auf den Apache zugreifen. 
 
 ![alt text](Bilder/15.JPG "Check")
+### 06 Bestehende Container kombinieren
 
-### 04 Docker Befehle
+Hier war es die Aufgabe bestehende zwei Container zu kombinieren. Dafür habe ich mysql als Datenbank verwendet undmyphpadmin als frontend. Ich brauchte folgende Befehle um diese Aufgabe erfolgreich zu bearbeiten.
+
+````
+$ docker pull mysql:8.0.1
+````
+````
+$ ocker run --name my-own-mysql -e MYSQL_ROOT_PASSWORD=mypass123 -d mysql:8.0.1
+````
+````
+$ docker pull phpmyadmin/phpmyadmin:latest
+````
+````
+$ docker run --name my-own-phpmyadmin -d --link my-own-mysql:db -p 8082:80 phpmyadmin/phpmyadmin
+````
+
+Zuerst hatte ich Problemem mit dem Erreichen der phpmyadmin Site und fragte mich wieso dies nicht ging. Erst später fiel mir auf das ich den Port 8081 bereits im Benutzung hatte und auf den Port 8082 wechseln musste. 
+
+So konnte ich in meinem Browser mit 10.2.45.10:8082 die Seite erreichen. Hier braucht man allerdings noch ein Login um die Seite nutzen zu können.
+
+Zum Schluss kann man mit der eigenen IP und dem richtigen Port überprüfen ob der Webserver erreichbar ist. 
+
+* Username: root
+* Password: mypass123
+
+Folgendermassen schaute die Seite aus:
+
+![alt text](Bilder/19.JPG "VMvsDocker")
+### 05 Docker Befehle
 | Befehl            | Funktion                                             |
 | -------------     | ---------------------------------------------------- | 
 | ```docker pull```     | Holt ein Image. |
