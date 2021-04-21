@@ -8,7 +8,6 @@ In meinem Markdown halte ich fest, was ich neues im Modul 300 gelernt habe und w
 
 * [30 Container](#30-Container)
 * [35 Sicherheit](#35-Sicherheit)
-* [40 Kubernetes (k8s)](#40-Kubernetes-(k8s))
 * [80 Ergänzungen zu den Unterlagen](#80-ergänzungen-zu-den-unterlagen)
 
 ## 30 Container
@@ -54,7 +53,17 @@ Wie man gut erkennen kann, geht es hier um den Vergleich zwischen virtuellen Mas
 
 ![alt text](Bilder/7.JPG "Check")
 
+Nun konnte man den Webserver noch weiter ausbauen. Damit man direkt eine Apache anzeige bekommt. Dafür musste man ein Apache Volume Repository erstellen. Anschliessend im File den Apacheteil hinzufügen und konnte mit einem einfachen Schritt das Volume erfolgreich implementieren. 
 
+Der Befehl den ich dafür gebraucht habe war:
+
+````
+$ docker run -dit --name apachevolume -p 5050:80 apachevolume
+````
+
+Danach konnte man wie auch beim Webserver mit dem konfigurierten Port 5050 auf den Apache zugreifen. 
+
+![alt text](Bilder/15.JPG "Check")
 
 ### 04 Docker Befehle
 | Befehl            | Funktion                                             |
@@ -142,16 +151,45 @@ $ docker run --read-only ubuntu touch x
 
 
 
-## 40 Kubernetes (k8s)
+
 
 ## 80 Ergänzungen zu den Unterlagen
 
-### Vergleich Vorwissen - Wissenszuwachs
+### 01 Ticketsystem
+
+Herr Kälin hat uns einen super Vorschlag gemacht, mit dem Implementieren eines Ticketsystems im umsere Umgebung. So sind wir als Gruppe zusammengessen und haben daran gebastelt. Wir haben uns für das Ticketsystem von Zammad entschieden. Dies aus einem einfachen Grund. Es bietet eine gute Grundlage und ist nicht komplex aufgebaut. Nach einem kurzen Einlesen sollte man Bescheid wissen wie man ein Ticket erstellen kann. Auch hat man einen Account auf den verschiedene Tickets zugewiesen werden können sowie auch Statistiken wie viele Tickets abgearbeitet wurden. 
+
+Ein wichtiger Grundbefehl um das Ticketsystem zum Laufen zu bringen wäre dieser hier. 
+
+````
+$ docker container run -ti --rm --name zammad -p 80:80 zammad/zammad
+````
+Wie man sieht habe ich das Ticketsystem über meine Server IP mit dem konfigurierten Port 8081 erreicht. 
+
+![alt text](Bilder/14.JPG "Check")
+
+
+### 02 Gescheiterte Aufgabe
+
+Ich wollte noch mit einer yamml Datei eine Cloud-Lösung versuchen mit in mein LB02 zu implementieren. Dafür konnte ich Travis Cl benutzen. Ich habe mein Repository in das Travis Cl geklont und es auch mit den richtigen Befehlen bearbeitet. 
+
+![alt text](Bilder/16.JPG "Check")
+
+Nun musste ich manuell ein .yamml File generieren und darin folgende Code in Datei setzen:
+````
+$ git: clone: false
+````
+Nun mussten noch kleine Befehle abgearbeitet werden. Trotzdem kam keine Antwort der Webseite und denn fehlenden Beitrag. Unter My Builds sollte ich weitere Ausgabe haben. Doch es kam keine,auch nach Tagen an dem zu arbeiten, leider gab es keinen Eintrag uter My Builds. 
+
+
+
+
+### 03 Vergleich Vorwissen - Wissenszuwachs
 
 Zuvor hatte ich ziemlich wenig Kenntnisse zum ganze Containerthema. Ich hatte einen üK zur Virtualisierung kurz vor dem Modul beginn abgeschlosssen und dort hatten wir das Thema Container ein wenig behandelt. 
 
 Nun weiss ich wofür Container benutzt werden und wieso sie von Vorteil sind. Allerdings denke ich umd dies in einer Firma implementieren zu können braucht es Spezialisten die sich damit auskennen oder man beauftragt eine externe Firma dafür die Spezialisten zur Verfügung hat. Das Modul insbesondere die Lb02 hat mir sehr geholfen die ganze Virtualisierung besser zu verstehen und ich denke dies kann mir un Zukunft sehr viel weiterhelfen. Ich habe dazu gelernt wie man Container anwendet und die gewünschten Tools wie ein Ticketsystem laufen lässt. 
 
-### Reflexion
+### 04 Reflexion
 
 Am Ende dieses Moduls kann ich behaupten das ich die Thematik dahinter verstanden habe. Auch wenn ich Statschwierigkeiten hatte mit gewissen Aufgaben, nahm ich mir die Zeit und versuchte sie wirklich zu verstehen. Ich hatte das Gefühl das man bei dieser LB02 wirklich das Thema verstanden haben muss um es umsetzen zu können in der Praxis. Ein eher komplexes und neues Thema welches hier behandelt wurde, doch sehr hilfreich um die Zukunft der Informatik besser nachvollziehen zu können.
