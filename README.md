@@ -218,7 +218,7 @@ Nun mussten noch kleine Befehle abgearbeitet werden. Trotzdem kam keine Antwort 
 | Von Client aus auf http://10.2.45.10:8082/ (phpmyadmin) | Funktioniert
 | Mit root & Passwort anmelden | Funktioniert
 | Webserver mit Apache erreichbar | Funktioniert
-|
+
 
 ### 04 Vergleich Vorwissen - Wissenszuwachs
 
